@@ -129,29 +129,31 @@ Apache webserver serves content placed in its document root located at path: `/v
 
 - You can now use a2ensite command to enable the new virtual host:
 
-`sudo a2ensite projectlamp`
+  `sudo a2ensite projectlamp`
 
 - You might want to disable the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website use a2dissite command , type:
 
-`sudo a2dissite 000-default`
+  `sudo a2dissite 000-default`
 
 - To make sure your configuration file doesn’t contain syntax errors, run:
 
-`sudo apache2ctl configtest`
+  `sudo apache2ctl configtest`
 
 - Finally, reload Apache so these changes take effect:
 
-`sudo systemctl reload apache2`
+  `sudo systemctl reload apache2`
 
 - Your new website is now active, but the web root /var/www/projectlamp is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected:
 
-`sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html`
+ `sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s    http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html`
 
 - Now go to your browser and try to open your website URL using IP address:
 
-`http://<Public-IP-Address>:80`
+  `http://<Public-IP-Address>:80`
 
 - You should find something like this below:
+
+![Screenshot (4)](https://user-images.githubusercontent.com/52359007/165104752-c691cfc8-3309-4cec-8145-caeec9569311.png)
 
 
 
