@@ -199,6 +199,16 @@ You can do this by creating a test PHP file in your document root.
 
 - You should see something like the screenshot below:
 
+  ![Screenshot (6)](https://user-images.githubusercontent.com/52359007/165144750-81b8ed9c-edbd-49eb-9577-35fda4928863.png)
+
+- The screenshot above contains sensitive information of your environment. So it is standard practice to remove it. Run the command below:
+
+  `sudo rm /var/www/your_domain/info.php`
+
+
+### Step 6 — Retrieving data from MySQL database with PHP
+
+
   
 
 
