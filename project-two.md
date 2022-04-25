@@ -209,6 +209,8 @@ You can do this by creating a test PHP file in your document root.
 ### Step 6 — Retrieving data from MySQL database with PHP
 
 
+
+
   
 
 
