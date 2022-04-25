@@ -44,7 +44,7 @@ In [project-one](https://github.com/uzukwujp/Darey.io-Internship/blob/main/proje
 
 - You should find something like the screenshot below if nginx is running:
 
-  `
+  ![nginx](https://user-images.githubusercontent.com/52359007/165133741-133f1b10-39d4-4c84-8107-966cdd347c13.PNG)
 
   
   
