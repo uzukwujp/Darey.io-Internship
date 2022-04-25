@@ -11,19 +11,27 @@ A technology stack is a set of tools or frameworks that is known to work nicely 
 #### STEP 1 — INSTALLING APACHE AND UPDATING THE FIREWALL
 Install Apache using Ubuntu’s package manager ‘apt’:
 
-#update a list of packages in package manager
+- #update a list of packages in package manager
 
 `sudo apt update`
 
-#run apache2 package installation
+- #run apache2 package installation
 
 `sudo apt install apache2`
 
-To verify that apache2 is running as a Service in our OS, use following command
+- To verify that apache2 is running as a Service in our OS, use following command
 
 `sudo systemctl status apache2`
 
-You should find a printout on your console like the one below:
+- You should find a printout on your console like the one below:
+
+![apache2](https://user-images.githubusercontent.com/52359007/165087732-758d73f5-ec5d-44a2-9552-7d6097176d64.PNG)
+
+- To publicly access your webserver on your browser add new security rule to open TCP port 80 like so:
+
+
+
+
 
 
 
