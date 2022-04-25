@@ -45,6 +45,30 @@ In [project-one](https://github.com/uzukwujp/Darey.io-Internship/blob/main/proje
 - You should find something like the screenshot below if nginx is running:
 
   ![nginx](https://user-images.githubusercontent.com/52359007/165133741-133f1b10-39d4-4c84-8107-966cdd347c13.PNG)
+  
+  
+### Step 2 — Installing MySQL
+
+- Run the command below to install mysql:
+
+  `sudo apt install mysql-server`
+  
+ When prompted, confirm installation by typing Y, and then ENTER.
+ 
+- To secure your database run the preinstalled script below:
+
+  `sudo mysql_secure_installation`
+  
+ This will ask if you want to configure the VALIDATE PASSWORD PLUGIN. Answer Y for yes or any character for No. Answer Y subsequently when prompted to complete the       process.
+ 
+- Run the command below to confirm mysql is running:
+
+  `sudo systemctl status mysql`
+  
+- You should find something like the screenshot below:
+
+  
+  
 
   
   
