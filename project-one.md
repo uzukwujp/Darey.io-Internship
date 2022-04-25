@@ -82,6 +82,8 @@ PHP is the component of our setup that will process code to display dynamic cont
 
 - You should find something like this below:
 
+![Php](https://user-images.githubusercontent.com/52359007/165097415-9b927978-be3b-4087-9e58-53f0eba8fe23.PNG)
+
 
 
 
