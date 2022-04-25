@@ -67,6 +67,10 @@ In [project-one](https://github.com/uzukwujp/Darey.io-Internship/blob/main/proje
   
 - You should find something like the screenshot below:
 
+  ![pbl-mysql](https://user-images.githubusercontent.com/52359007/165136393-fd765f91-e080-4c76-bad1-2759ee094f16.PNG)
+  
+-
+
   
   
 
