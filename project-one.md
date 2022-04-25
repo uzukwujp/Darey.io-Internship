@@ -55,6 +55,8 @@ Install Apache using Ubuntu’s package manager ‘apt’:
 
 You should find screenshot below on your console:
 
+![mysql-running](https://user-images.githubusercontent.com/52359007/165094985-a6c09cf9-0c29-49f1-91b2-53690210628c.PNG)
+
 
 
 
