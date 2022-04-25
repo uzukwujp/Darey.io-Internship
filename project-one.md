@@ -189,7 +189,7 @@ With the default DirectoryIndex settings on Apache, a file named index.html will
 
 - The above contains sensitive information about your environment. To remove it run the command below:
 
-`  sudo rm /var/www/projectlamp/index.php`
+  `sudo rm /var/www/projectlamp/index.php`
 
 
 
