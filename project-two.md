@@ -69,7 +69,13 @@ In [project-one](https://github.com/uzukwujp/Darey.io-Internship/blob/main/proje
 
   ![pbl-mysql](https://user-images.githubusercontent.com/52359007/165136393-fd765f91-e080-4c76-bad1-2759ee094f16.PNG)
   
--
+- Confirm that you have access to the database by running the command below:
+
+  `sudo mysql`
+  
+- Exit the database with the command below:
+
+  `exit`
 
   
   
