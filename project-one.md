@@ -49,6 +49,14 @@ Install Apache using Ubuntu’s package manager ‘apt’:
 
 `sudo mysql_secure_installation`
 
+- Confirm mysql is running by running the command below:
+
+`sudo systemctl status mysql`
+
+You should find screenshot below on your console:
+
+
+
 
 
 
