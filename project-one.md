@@ -37,6 +37,8 @@ Install Apache using Ubuntu’s package manager ‘apt’:
 
 - You find a picture like this below:
 
+![Screenshot (3)](https://user-images.githubusercontent.com/52359007/165090907-0875b135-ede3-4e79-b6b2-b3897f4f8f92.png)
+
 
 
 
