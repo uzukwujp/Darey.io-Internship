@@ -181,14 +181,15 @@ With the default DirectoryIndex settings on Apache, a file named index.html will
 - Paste and save the text below:
 
   `<?php
-  
   phpinfo();`
   
 - You should see something like this below:
 
 ![Screenshot (5)](https://user-images.githubusercontent.com/52359007/165108055-fa797aeb-c21d-4898-98fc-477fb83baad1.png)
 
--
+- The above contains sensitive information about your environment. To remove it run the command below:
+
+` sudo rm /var/www/projectlamp/index.php`
 
 
 
