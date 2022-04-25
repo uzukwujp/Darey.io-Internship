@@ -85,6 +85,35 @@ PHP is the component of our setup that will process code to display dynamic cont
 ![Php](https://user-images.githubusercontent.com/52359007/165097415-9b927978-be3b-4087-9e58-53f0eba8fe23.PNG)
 
 
+#### STEP 4 — CREATING A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE
+Apache webserver serves content placed in its document root located at path: `/var/www/html`. This is fine when Apache is required to serve one website. However when Apache is required to serve multiple websites, a **Virtual Host** is configured. **Virtual Host** servers as a container for each website. You require one for each website to be served.
+
+- Create a directory for projectlamp in /var/directory by running the command below:
+
+  `sudo mkdir /var/www/projectlamp`
+
+- Set ownership of projectlamp directory to the logged-in user using the command below:
+
+  `sudo chown -R $USER:$USER /var/www/projectlamp`
+
+- Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor.
+
+  `sudo vi /etc/apache2/sites-available/projectlamp.conf`
+  
+  - This will create a new blank file. Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:
+
+  `<VirtualHost *:80>
+    ServerName projectlamp
+    ServerAlias www.projectlamp 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/projectlamp
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>`
+
+
+
+
 
 
 
