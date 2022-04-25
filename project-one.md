@@ -159,16 +159,16 @@ Apache webserver serves content placed in its document root located at path: `/v
 #### STEP 5 — ENABLE PHP ON THE WEBSITE
 With the default DirectoryIndex settings on Apache, a file named index.html will always take precedence over an index.php file. This is useful for setting up maintenance pages in PHP applications, by creating a temporary index.html file containing an informative message to visitors. Because this page will take precedence over the index.php page, it will then become the landing page for the application. Once maintenance is over, the index.html is renamed or removed from the document root, bringing back the regular application page
 
-- In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
+- In case you want to change this behavior, you’ll need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed   within the DirectoryIndex directive:
 
   `sudo vim /etc/apache2/mods-enabled/dir.conf`
 
-`  <IfModule mod_dir.c>
+` <IfModule mod_dir.c>
         #Change this:
         #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
         #To this:
         DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-</IfModule>`
+  </IfModule>`
 
 - After saving and closing the file, you will need to reload Apache so the changes take effect:
 
@@ -181,9 +181,14 @@ With the default DirectoryIndex settings on Apache, a file named index.html will
 - Paste and save the text below:
 
   `<?php
+  
   phpinfo();`
   
 - You should see something like this below:
+
+![Screenshot (5)](https://user-images.githubusercontent.com/52359007/165108055-fa797aeb-c21d-4898-98fc-477fb83baad1.png)
+
+-
 
 
 
