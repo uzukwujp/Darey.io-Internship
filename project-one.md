@@ -29,6 +29,8 @@ Install Apache using Ubuntu’s package manager ‘apt’:
 
 - To publicly access your webserver on your browser add new security rule to open TCP port 80 like so:
 
+![TCP 80](https://user-images.githubusercontent.com/52359007/165089230-c566c252-fe9e-4d7b-b915-89820d04386f.PNG)
+
 
 
 
