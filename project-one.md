@@ -39,6 +39,13 @@ Install Apache using Ubuntu’s package manager ‘apt’:
 
 ![Screenshot (3)](https://user-images.githubusercontent.com/52359007/165090907-0875b135-ede3-4e79-b6b2-b3897f4f8f92.png)
 
+#### STEP 2 — INSTALLING MYSQL
+
+- Install MYSQL
+`sudo apt install mysql-server`
+- Run preinstalled mysql script to lock down database access. It will prompt to **Configure Password validation**. Enter Y to accept or any other character to object. Enter Y subsequently when prompted to complete the process.
+`sudo mysql_secure_installation`
+
 
 
 
