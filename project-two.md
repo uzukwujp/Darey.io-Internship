@@ -34,6 +34,18 @@ In [project-one](https://github.com/uzukwujp/Darey.io-Internship/blob/main/proje
   
 - You should the something like the screenshot below:
 
+  ![Nginx-running](https://user-images.githubusercontent.com/52359007/165132482-f39f1c3f-d2d5-425b-bd26-6efe52c15639.PNG)
+  
+- Confirm that Nginx can handle request from the internet by lunching it on the browser using the *URL* below:
+
+  `http://<Public-IP-Address>:80`
+  
+- You can access your Public-IP-Address from your EC2 instance.
+
+- You should find something like the screenshot below if nginx is running:
+
+  `
+
   
   
    
