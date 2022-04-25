@@ -65,6 +65,10 @@ you should find the picture below on your console:
 
 ![mysql](https://user-images.githubusercontent.com/52359007/165095650-d8df8314-7541-4418-977d-1a563ca30d28.PNG)
 
+- Exit from mysql by running the command below:
+
+`exit`
+
 
 
 
