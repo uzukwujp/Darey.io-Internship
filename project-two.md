@@ -153,9 +153,61 @@ server_name — Defines which domain names and/or IP addresses this server block
 - You shall see following message:
 
  `nginx: the configuration file /etc/nginx/nginx.conf syntax is ok`
+ 
  `nginx: configuration file /etc/nginx/nginx.conf test is successful`
  
--
+- Disable default Nginx host that is currently configured to listen on port 80, for this run:
+
+  `sudo unlink /etc/nginx/sites-enabled/default`
+  
+- Reload Nginx to apply the changes:
+
+  `sudo systemctl reload nginx`
+  
+- Your new website is now active, but the web root /var/www/projectLEMP is still empty. Create an index.html file in that location so that we can test that your new     server block works as expected:
+
+  sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s
+  http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html
+ 
+- Now go to your browser and try to open your website URL using IP address:
+
+  `http://<Public-IP-Address>:80`
+  
+  
+### Step 5 – Testing PHP with Nginx
+
+Your LEMP stack should now be completely set up.
+
+At this point, your LAMP stack is completely installed and fully operational.
+
+You can test it to validate that Nginx can correctly hand .php files off to your PHP processor.
+
+You can do this by creating a test PHP file in your document root.
+
+- Open a new file called info.php within your document root in your text editor:
+
+  `sudo vi /var/www/projectLEMP/info.php`
+  
+- paste the following lines below into the new file.
+
+  <?php
+  phpinfo();
+
+- You can access your website with the Url below:
+
+  `http://`server_domain_or_IP`/info.php`
+
+- You should see something like the screenshot below:
+
+  
+
+
+
+
+  
+ 
+ 
+ 
 
 
 
