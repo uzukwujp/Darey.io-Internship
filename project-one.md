@@ -31,6 +31,14 @@ Install Apache using Ubuntu’s package manager ‘apt’:
 
 ![TCP 80](https://user-images.githubusercontent.com/52359007/165089230-c566c252-fe9e-4d7b-b915-89820d04386f.PNG)
 
+- Access your webserver using the url below:
+
+`http://<Public-IP-Address>:80`
+
+- You find a picture like this below:
+
+
+
 
 
 
