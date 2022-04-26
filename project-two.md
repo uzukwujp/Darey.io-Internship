@@ -292,6 +292,8 @@ In this step you will create a test database (DB) with simple "To do list" and c
 
 - You should see the screenshot below:
 
+  ![nginx-pbl3](https://user-images.githubusercontent.com/52359007/165346198-c12b1c0c-14ae-44e1-a0f8-6eb2bf1adbd7.PNG)
+
 
 
 
