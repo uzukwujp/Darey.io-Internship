@@ -207,6 +207,97 @@ You can do this by creating a test PHP file in your document root.
 
 
 ### Step 6 — Retrieving data from MySQL database with PHP
+In this step you will create a test database (DB) with simple "To do list" and configure access to it, so the Nginx website would be able to query data from the DB and display it.
+
+- First, connect to the MySQL console using the root account:
+
+  `sudo mysql`
+
+- To create a new database, run the following command from your MySQL console:
+
+  `mysql> CREATE DATABASE 'example_database';`
+
+- To Create a user and password run the command below:
+
+  `mysql>  CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';`
+
+- Now we need to give this user permission over the example_database database:
+
+  `mysql> GRANT ALL ON example_database.* TO 'example_user'@'%';`
+
+- To exit mysql as root user, run the command below:
+
+  `mysql> exit`
+
+- To test our database, log in as user: `example_user` using the command below:
+
+  `mysql -u example_user -p`
+
+- change into `example_database using the command below:
+
+  `mysql> SHOW DATABASES;`
+
+- Next, we’ll create a test table named todo_list. From the MySQL console, run the following statement:
+
+  CREATE TABLE example_database.todo_list (
+  mysql>     item_id INT AUTO_INCREMENT,
+  mysql>     content VARCHAR(255),
+  mysql>     PRIMARY KEY(item_id)
+  mysql> );
+
+- Insert a few rows of content in the test table. You might want to repeat the next command a few times, using different VALUES:
+
+  `mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");`
+
+- To confirm that the data was successfully saved to your table, run:
+
+
+  `mysql>  SELECT * FROM example_database.todo_list;`
+
+- After confirming that you have valid data in your test table, you can exit the MySQL console:
+
+  `mysql> exit`
+
+- Now you can create a PHP script that will connect to MySQL and query for your content. Create a new PHP file in your custom web root directory using your preferred     editor. We’ll use vi for that:
+
+  `vi /var/www/projectLEMP/todo_list.php`
+
+- Paste the text below into the blank file:
+
+  <?php
+  $user = "example_user";
+  $password = "password";
+  $database = "example_database";
+  $table = "todo_list";
+
+  try {
+   $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+   echo "<h2>TODO</h2><ol>";
+   foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+   }
+   echo "</ol>";
+   } catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+  }
+
+- Save and close the file when you are done editing.
+
+
+- Access the browser through the URL below:
+
+  
+  `http://<Public_domain_or_IP>/todo_list.php`
+
+- You should see the screenshot below:
+
+
+
+
+
+  
+
 
 
 
