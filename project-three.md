@@ -42,5 +42,24 @@ You can follow same steps as step 0 in [project-one](https://github.com/uzukwujp
   
 - You should see a screenshot like the one below on your terminal:
 
+  ![pbl3](https://user-images.githubusercontent.com/52359007/165491807-f543be0f-847b-4fec-89df-03ee5bf909c3.PNG)
+  
+- Create a new directory for your To-Do project:
+
+  `mkdir Todo`
+  
+- Changed into Todo directory with the command below:
+
+  `cd Todo`
+  
+- Initialise a project by running the command below:
+
+  `npm init`
+  
+- When prompted answer accordingly and you should see something like the screenshot below:
+
+  
+
+
   
   
