@@ -36,10 +36,11 @@ You can follow same steps as step 0 in [project-one](https://github.com/uzukwujp
   
 - The command above installs both Node and NPM packages.
 
-- To Verify the version of Nodejs installed, run the command below:
+- To Verify the version of Nodejs and NPM installed, run the command below:
 
-  `node -v`
+  `node -v; npm -v`
   
 - You should see a screenshot like the one below on your terminal:
 
+  
   
