@@ -29,3 +29,17 @@ You can follow same steps as step 0 in [project-one](https://github.com/uzukwujp
 - Lets get the location of Node.js software from Ubuntu repositories:
 
   `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
+  
+- Install Node.js with the command below:
+
+  `sudo apt-get install -y nodejs`
+  
+- The command above installs both Node and NPM packages.
+
+- To Verify the version of Nodejs installed, run the command below:
+
+  `node -v`
+  
+- You should see a screenshot like the one below on your terminal:
+
+  
