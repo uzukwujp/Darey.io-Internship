@@ -310,6 +310,10 @@ Now we need to update the index.js to reflect the use of .env so that Node.js ca
 - You should soething like the screenshot below if done successfully:
 
   ![mongodb](https://user-images.githubusercontent.com/52359007/165506464-7d7bd7ef-5735-4dd1-a07b-3bb0d2aa94c3.PNG)
+  
+- Postman is a tool that is used to manually test Api endpoints. You should see something like the screenshot below if our endpoints work perfectly:
+
+  
 
 
   
