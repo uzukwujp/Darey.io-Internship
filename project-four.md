@@ -306,7 +306,12 @@ AngularJS provides a web framework for creating dynamic views in your web applic
 
   ![pl4-node](https://user-images.githubusercontent.com/52359007/165556694-8c901cfb-ac5c-4496-a48a-f0427efa6031.PNG)
   
-- Open TCP port 3300 to access the website on your browser. You refer to [project-one]() to refresh your memory on how to write security rules on AWS.
+- Open TCP port 3300 to access the website on your browser. You refer to [project-one](https://github.com/uzukwujp/Darey.io-Internship/blob/main/project-one.md) to       refresh your memory on how to write security rules on AWS.
+
+- Using your public IP address from your Ubuntu server you can access the website. You should find something like the screenshot below:
+
+  
+- 
 
   
 
