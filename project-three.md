@@ -109,6 +109,59 @@ You can follow same steps as step 0 in [project-one](https://github.com/uzukwujp
   
 - You should find something like the screenshot below:
 
+  ![pl3-node](https://user-images.githubusercontent.com/52359007/165498710-4e789811-294f-4ba7-9c7e-de1a252ab742.PNG)
+  
+#### Routes
+
+There are three actions that our To-Do application needs to be able to do:
+
+- Create a new task
+- Display list of all tasks
+- Delete a completed task
+- Each task will be associated with some particular endpoint and will use different standard HTTP request methods: POST, GET, DELETE.
+
+For each task, we need to create routes that will define various endpoints that the To-do app will depend on.
+
+- Lets create Routes folder with the command below:
+
+  `mkdir routes`
+  
+- Change directory to routes folder:
+
+  `cd routes`
+  
+- create a file api.js with the command below:
+
+  `touch api.js`
+  
+- Open the file with the command below:
+
+  `vim api.js`
+  
+- In the blank file paste text below and save the file:
+
+```
+  const express = require ('express');
+  const router = express.Router();
+
+  router.get('/todos', (req, res, next) => {
+
+  });
+
+  router.post('/todos', (req, res, next) => {
+
+  });
+
+  router.delete('/todos/:id', (req, res, next) => {
+
+  })
+
+  module.exports = router;
+  
+```
+
+
+
   
   
   
