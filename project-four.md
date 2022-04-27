@@ -310,8 +310,11 @@ AngularJS provides a web framework for creating dynamic views in your web applic
 
 - Using your public IP address from your Ubuntu server you can access the website. You should find something like the screenshot below:
 
+
+  ![pbl4-angular](https://user-images.githubusercontent.com/52359007/165558545-82adb3fa-badd-4cdc-a138-362f5377b021.PNG)
+
   
-- 
+
 
   
 
