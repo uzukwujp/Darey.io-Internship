@@ -314,6 +314,139 @@ Now we need to update the index.js to reflect the use of .env so that Node.js ca
 - Postman is a tool that is used to manually test Api endpoints. You should see something like the screenshot below if our endpoints work perfectly:
 
   ![Screenshot (7)](https://user-images.githubusercontent.com/52359007/165507309-1b5d356e-5753-4a08-b420-82d71d6a795d.png)
+  
+  
+  
+### Step 2 – Frontend creation
+Since we are done with the functionality we want from our backend and API, it is time to create a user interface for a Web client (browser) to interact with the application via API. To start out with the frontend of the To-do app, we will use the create-react-app command to scaffold our app.
+
+- In the same root directory as your backend code, which is the Todo directory, run:
+
+  `npx create-react-app client`
+  
+#### Running a React App
+
+- Install concurrently with the command below:
+
+  `npm install concurrently --save-dev`
+  
+- Install nodemon with the command below:
+
+  `npm install nodemon --save-dev`
+
+- In Todo folder open the package.json file. Change the highlighted part of the below screenshot and replace with the code below.
+
+  ```
+     "scripts": {
+     "start": "node index.js",
+     "start-watch": "nodemon index.js",
+     "dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
+     },
+     
+  ```
+  
+#### Configure Proxy in package.json
+
+- Change directory to ‘client’ with the command below:
+
+  `cd client`
+
+- Open the package.json file:
+
+  `vi package.json`
+  
+- Add the key value pair in the package.json file "proxy": "http://localhost:5000"
+  The whole purpose of adding the proxy configuration in number 3 above is to make it possible to access the application directly from the browser by simply calling     the server url like http://localhost:5000 rather than always including the entire path like http://localhost:5000/api/todos
+  
+- Now, ensure you are inside the Todo directory, and simply do:
+
+  `npm run dev`
+  
+  This should start the app on port 3000
+
+#### Creating your React Components
+
+- From your Todo directory run the command below:
+  
+  `cd client`
+  
+- move to the src directory
+
+  `cd src`
+  
+- Inside your src folder create another folder called components:
+
+  `mkdir components`
+  
+- Move into the components directory with the command below:
+
+  `cd components`
+  
+- Inside ‘components’ directory create three files Input.js, ListTodo.js and Todo.js:
+
+  `touch Input.js ListTodo.js Todo.js`
+  
+- Open Input.js file:
+
+  `vi Input.js`
+
+- Copy and paste the code below:
+
+  ```
+      import React, { Component } from 'react';
+      import axios from 'axios';
+
+      class Input extends Component {
+
+      state = {
+      action: ""
+      }
+
+      addTodo = () => {
+      const task = {action: this.state.action}
+
+      if(task.action && task.action.length > 0){
+       axios.post('/api/todos', task)
+        .then(res => {
+          if(res.data){
+            this.props.getTodos();
+            this.setState({action: ""})
+           }
+         })
+         .catch(err => console.log(err))
+      }else {
+      console.log('input field required')
+     }
+
+   }
+
+     handleChange = (e) => {
+    this.setState({
+     action: e.target.value
+   })
+   }
+
+     render() {
+    let { action } = this.state;
+    return (
+    <div>
+    <input type="text" onChange={this.handleChange} value={action} />
+    <button onClick={this.addTodo}>add todo</button>
+    </div>
+       )
+       }
+    }
+
+   export default Input
+  ```
+
+
+- Install Axios: A http client using the commands below:
+
+  `cd ..; cd ..; npm install axios;`
+
+  `
+
 
   
 
