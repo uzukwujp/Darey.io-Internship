@@ -313,6 +313,8 @@ Now we need to update the index.js to reflect the use of .env so that Node.js ca
   
 - Postman is a tool that is used to manually test Api endpoints. You should see something like the screenshot below if our endpoints work perfectly:
 
+  ![Screenshot (7)](https://user-images.githubusercontent.com/52359007/165507309-1b5d356e-5753-4a08-b420-82d71d6a795d.png)
+
   
 
 
