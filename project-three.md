@@ -160,6 +160,159 @@ For each task, we need to create routes that will define various endpoints that 
   
 ```
 
+#### Models
+Since the App will be interacting with a NOSQL database in this case Mongodb, We need to create a model. A model is blueprint for a collection in a NOSQL database.
+mongoose is an Object Document Mapper(ODM). It esentially eases interaction with Mongodb. It will be used to define our model.
+
+- Change directory back Todo folder with cd .. and install Mongoose with the command below:
+
+  `npm install mongoose`
+  
+- Create a new folder models :
+
+  `mkdir models`
+  
+- Change directory into the newly created ‘models’ folder with:
+
+  `cd models`
+  
+- Inside the models folder, create a file and name it todo.js:
+
+  `touch todo.js`
+  
+- Open the file created with vi todo.js then paste the code below in the file:
+
+
+```
+   const mongoose = require('mongoose');
+   const Schema = mongoose.Schema;
+
+  //create schema for todo
+  const TodoSchema = new Schema({
+  action: {
+  type: String,
+  required: [true, 'The todo text field is required']
+  }
+  })
+
+  //create model for todo
+  const Todo = mongoose.model('todo', TodoSchema);
+
+  module.exports = Todo;
+  
+```
+
+- Now we need to update our routes from the file api.js in ‘routes’ directory to make use of the new model.
+
+  In Routes directory, open api.js with vim api.js, delete the code inside with :%d command and paste there code below into it then save and exit
+  
+  
+```
+   const express = require ('express');
+   const router = express.Router();
+   const Todo = require('../models/todo');
+
+   router.get('/todos', (req, res, next) => {
+
+   //this will return all the data, exposing only the id and action field to the client
+   Todo.find({}, 'action')
+   .then(data => res.json(data))
+   .catch(next)
+   });
+
+   router.post('/todos', (req, res, next) => {
+   if(req.body.action){
+   Todo.create(req.body)
+   .then(data => res.json(data))
+   .catch(next)
+   }else {
+   res.json({
+   error: "The input field is empty"
+   })
+   }
+   });
+
+   router.delete('/todos/:id', (req, res, next) => {
+   Todo.findOneAndDelete({"_id": req.params.id})
+   .then(data => res.json(data))
+   .catch(next)
+   })
+
+   module.exports = router;
+   
+```
+
+#### MongoDB Database
+
+We need a database where we will store our data. For this we will make use of mongodb Atlas. Atlas provides MongoDB database as a service solution (DBaaS),
+Follow the installation guide and make sure you whitelist your database to allow connection from any Ip address by setting it to: 0.0.0.0/0.
+
+In the index.js file, we specified process.env to access environment variables, but we have not yet created this file. So we need to do that now.
+
+- Create a file in your Todo directory and name it .env.
+
+  ```
+  touch .env
+  vi .env
+  ```
+- Add the connection string to access the database in it, just as below:
+
+  `DB = 'mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority'`
+  
+Now we need to update the index.js to reflect the use of .env so that Node.js can connect to the database.
+
+- Delete the content of index.js, paste the text below and save the file:
+
+  ```
+     const express = require('express');
+     const bodyParser = require('body-parser');
+     const mongoose = require('mongoose');
+     const routes = require('./routes/api');
+     const path = require('path');
+     require('dotenv').config();
+
+     const app = express();
+
+     const port = process.env.PORT || 5000;
+
+     //connect to the database
+     mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
+     .then(() => console.log(`Database connected successfully`))
+     .catch(err => console.log(err));
+
+     //since mongoose promise is depreciated, we overide it with node's promise
+     mongoose.Promise = global.Promise;
+
+     app.use((req, res, next) => {
+     res.header("Access-Control-Allow-Origin", "\*");
+     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+     next();
+     });
+
+     app.use(bodyParser.json());
+
+     app.use('/api', routes);
+
+     app.use((err, req, res, next) => {
+     console.log(err);
+     next();
+     });
+
+     app.listen(port, () => {
+     console.log(`Server running on port ${port}`)
+     });
+  ```
+
+- Start your server using the command:
+
+  `node index.js`
+  
+- You should soething like the screenshot below if done successfully:
+
+  
+
+
+
 
 
   
