@@ -701,6 +701,8 @@ Since we are done with the functionality we want from our backend and API, it is
   `npm run dev`
   
 Barring any errors, refresh your browser and you will find something like the screenshot below:
+
+
   ![Screenshot (9)](https://user-images.githubusercontent.com/52359007/165517529-48835dc6-e683-4dfc-b22e-cb63b905a825.png)
 
   
