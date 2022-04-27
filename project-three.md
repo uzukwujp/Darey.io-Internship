@@ -58,6 +58,61 @@ You can follow same steps as step 0 in [project-one](https://github.com/uzukwujp
   
 - When prompted answer accordingly and you should see something like the screenshot below:
 
+  ![json-pl3](https://user-images.githubusercontent.com/52359007/165494722-227a12c4-5653-40f6-8139-a785d7335860.PNG)
+  
+#### Install ExpressJS
+- Install Express using npm:
+
+  `npm install express`
+  
+- create a file index.js with the command below:
+
+  `touch index.js`
+  
+- Install the dotenv module:
+
+  `npm install dotenv`
+  
+- Open the index.js file with the command below:
+
+  `vi index.js`
+  
+- In the blank open file, paste and save the text below:
+
+
+```
+  const express = require('express');
+  require('dotenv').config();
+
+  const app = express();
+
+  const port = process.env.PORT || 5000;
+
+  app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "\*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+  });
+
+  app.use((req, res, next) => {
+  res.send('Welcome to Express');
+  });
+
+  app.listen(port, () => {
+  console.log(`Server running on port ${port}`)
+  });
+```
+
+- Now run the command below: 
+
+  `node index.js`
+  
+- You should find something like the screenshot below:
+
+  
+  
+  
+
   
 
 
