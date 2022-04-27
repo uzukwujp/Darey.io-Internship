@@ -14,4 +14,18 @@ In this project, you are tasked to implement a web solution based on MERN stack 
 
 ### Step 0 – Preparing prerequisites
 
-You can follow same steps as step 0 in [project-one]()
+You can follow same steps as step 0 in [project-one](https://github.com/uzukwujp/Darey.io-Internship/blob/main/project-one.md)
+
+### Step 1 – Backend configuration
+
+- Update ubuntu:
+
+  `sudo apt update`
+  
+- Upgrade ubuntu:
+
+  `sudo apt upgrade`
+  
+- Lets get the location of Node.js software from Ubuntu repositories:
+
+  `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
