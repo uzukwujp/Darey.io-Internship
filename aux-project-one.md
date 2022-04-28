@@ -18,4 +18,20 @@ Write a shell script to onboarding 20 users. The script must meet the following 
 
 
 The Script implementation is shown on the screenshot below:
+  
+  ![Sample-shell script](https://user-images.githubusercontent.com/52359007/165753461-34b76e21-f995-4286-9bf6-07a0ca522d28.PNG)
+  
+The output on the terminal when the script runs successfully:
+
+  
+  ![shell script](https://user-images.githubusercontent.com/52359007/165753732-a8d2bdc8-913b-4f29-9fcb-a851874d2558.PNG)
+  
+Content of root directory:
+
+  
+  ![home direc](https://user-images.githubusercontent.com/52359007/165754155-398da6ea-b037-44b5-a152-ec2361eb3ed5.PNG)
+  
+Content of Shell directory:  
+
+![content of Shell direc](https://user-images.githubusercontent.com/52359007/165754285-894aad77-30c3-4d0b-99f3-fdc327dfffb4.PNG)
 
