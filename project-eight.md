@@ -4,7 +4,7 @@ In project seven, We extended our 3- tier architecture for website by adding an 
 
 To solve this problem, we need a single point of entry which routes traffic accross our webserver(3). Depending our configuration, the webserver can equally share the incoming request.
 
-**Load Balancers** provide this single point of entry. They can software based or hardware based. Examples of software based load balancer are:
+**Load Balancers** provide this single point of entry. They can be software based or hardware based. Examples of software based load balancer are:
 
 - Nginx
 
