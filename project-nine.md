@@ -31,6 +31,12 @@ In this project we introduce Jenkins. Jenkins is an open source self contained a
 
   `sudo systemctl status jenkins`
   
+  
+  
+  ![jenkins-running](https://user-images.githubusercontent.com/52359007/166102459-594f1b6d-d79e-412d-a041-d32904efb160.PNG)
+
+
+  
 - By default Jenkins server uses TCP port 8080 – open it by creating a new Inbound Rule in your EC2 Security Group
 
 - Perform initial Jenkins setup
@@ -49,3 +55,44 @@ In this project we introduce Jenkins. Jenkins is an open source self contained a
   
   
 - Go to Jenkins web console, click "New Item" and create a "Freestyle project"
+
+
+
+### Step 3 – Configure Jenkins to copy files to NFS server via SSH
+
+
+- Install "Publish Over SSH" plugin.
+
+  
+  ![jenkins-pushoverssh](https://user-images.githubusercontent.com/52359007/166102261-33fa8027-69be-49b1-aa35-c9e650d06018.PNG)
+  
+  
+- Configure the job/project to copy artifacts over to NFS server.
+
+  - Provide a private key (content of .pem file that you use to connect to NFS server via SSH/Putty)
+
+  - Arbitrary name
+
+  - Hostname – can be private IP address of your NFS server
+
+  - Username – ec2-user (since NFS server is based on EC2 with RHEL 8)
+
+  - Remote directory – /mnt/apps since our Web Servers use it as a mointing point to retrieve files from the NFS server
+
+
+- Test the configuration and make sure the connection returns Success. Remember, that TCP port 22 on NFS server must be open to receive SSH connections.
+
+- To make sure that the files in /mnt/apps have been udated – connect via SSH/Putty to your NFS server and check README.MD file
+
+  
+  
+  ![console-output-jenkins](https://user-images.githubusercontent.com/52359007/166102401-a4acfea4-b386-4d35-a7b8-c23cda010b03.PNG)
+  
+  
+  
+  ![jenkins-nfs payload](https://user-images.githubusercontent.com/52359007/166102433-42c7791c-acbc-4132-a427-ba3412ced7ac.PNG)
+  
+  
+  
+  
+
