@@ -101,10 +101,141 @@ Project fifteen is all about implementing the infrastructure architecture above 
  
 
      ![AMIs](https://user-images.githubusercontent.com/52359007/170268945-1c71da12-d426-4f56-ab26-d1bd3cb68805.PNG)
+     
+     
+  - Prepare Launch Template For Nginx (One Per Subnet)
+
+    - Make use of the AMI to set up a launch template
+    
+    - Ensure the Instances are launched into a public subnet
+    
+    - Assign appropriate security group
+    
+    - Configure Userdata to update yum package repository and install nginx
 
 
+     ![launch template](https://user-images.githubusercontent.com/52359007/170269926-5850eb00-813c-43c0-8f3a-ac2b1a9149ae.PNG) 
+     
+     
+  - Configure Target Groups
+
+    - Select Instances as the target type
+    
+    - Ensure the protocol HTTPS on secure TLS port 443
+    
+    - Ensure that the health check path is /healthstatus
+    
+    - Register Nginx Instances as targets
+    
+    - Ensure that health check passes for the target group
+
+  
+
+   ![target-group](https://user-images.githubusercontent.com/52359007/170270960-cebc2dd1-0323-48a2-94f5-d445e8d7230d.PNG)
+   
+   
+  - Configure Autoscaling For Nginx
+
+    - Select the right launch template
+    
+    - Select the VPC
+    
+    - Select both public subnets
+    
+    - Enable Application Load Balancer for the AutoScalingGroup (ASG)
+    
+    - Select the target group you created before
+    
+    - Ensure that you have health checks for both EC2 and ALB
+    
+    - The desired capacity is 2
+        - Minimum capacity is 2
+        
+        - Maximum capacity is 4
+        
+        - Set scale out if CPU utilization reaches 90%
+        
+    - Ensure there is an SNS topic to send scaling notifications
+
+ 
+   ![Autoscaling group](https://user-images.githubusercontent.com/52359007/170272396-1abd719e-b9ea-49f1-b714-112408db6f86.PNG) 
+   
+   
+ - Set Up Compute Resources for Bastion
 
 
+  - Provision the EC2 Instances for Bastion
+  
+  - Create an EC2 Instance based on CentOS Amazon Machine Image (AMI) per each Availability Zone in the same Region and same AZ where you created Nginx server
+  
+  - Ensure that it has the following software installed
+
+    - python
+    
+    - ntp
+    
+    - net-tools
+    
+    - vim
+    
+    - wget
+    
+    - telnet
+    
+    - epel-release
+    
+    - htop
+    
+  - Associate an Elastic IP with each of the Bastion EC2 Instances
+  
+  - Create an AMI out of the EC2 instance
+
+
+  - Prepare Launch Template For Bastion (One per subnet)
+  
+      - Make use of the AMI to set up a launch template
+      
+      - Ensure the Instances are launched into a public subnet
+      
+      - Assign appropriate security group
+      
+      - Configure Userdata to update yum package repository and install Ansible and git
+      
+  - Configure Target Groups
+  
+      - Select Instances as the target type
+      
+      - Ensure the protocol is TCP on port 22
+      
+      - Register Bastion Instances as targets
+      
+      - Ensure that health check passes for the target group
+      
+      
+  - Configure Autoscaling For Bastion
+
+
+    - Select the right launch template
+    
+    - Select the VPC
+    
+    - Select both public subnets
+    
+    - Enable Application Load Balancer for the AutoScalingGroup (ASG)
+    
+    - Select the target group you created before
+    
+    - Ensure that you have health checks for both EC2 and ALB
+    
+    - The desired capacity is 2
+    
+    - Minimum capacity is 2
+    
+    - Maximum capacity is 4
+    
+    - Set scale out if CPU utilization reaches 90%
+    
+    - Ensure there is an SNS topic to send scaling notifications
 
 
 
