@@ -238,6 +238,81 @@ Project fifteen is all about implementing the infrastructure architecture above 
     - Ensure there is an SNS topic to send scaling notifications
 
 
+ - Set Up Compute Resources for Webservers
+
+ - Provision the EC2 Instances for Webserver
+
+ -  Now, you will need to create 2 separate launch templates for both the WordPress and Tooling websites
+
+ -  Create an EC2 Instance (Centos) each for WordPress and Tooling websites per Availability Zone (in the same Region).
+
+ -   Ensure that it has the following software installed
+
+      - python
+      
+      - ntp
+      
+      - net-tools
+      
+      - vim
+      
+      - wget
+      
+      - telnet
+      
+      - epel-release
+      
+      - htop
+      
+      - php
+      
+ - Create an AMI out of the EC2 instance
+
+ - Prepare Launch Template For Webservers (One per subnet)
+ 
+   - Make use of the AMI to set up a launch template
+   
+   - Ensure the Instances are launched into a public subnet
+   
+   - Assign appropriate security group
+   
+   - Configure Userdata to update yum package repository and install wordpress (Only required on the WordPress launch template)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
