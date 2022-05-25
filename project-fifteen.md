@@ -1,1 +1,5 @@
 ## AWS CLOUD SOLUTION FOR 2 COMPANY WEBSITES USING A REVERSE PROXY TECHNOLOGY
+
+
+![image](https://user-images.githubusercontent.com/52359007/170261120-b583cdf0-dc68-451a-8a01-3873febaaf9c.png)
+
