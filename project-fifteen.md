@@ -17,3 +17,9 @@ Project fifteen is all about implementing the infrastructure architecture above 
 
 
   ![Route53](https://user-images.githubusercontent.com/52359007/170263028-2e618e42-bd22-4cb0-9834-a6728de3bd3d.PNG)
+  
+
+- Create a VPC
+
+
+![VPC](https://user-images.githubusercontent.com/52359007/170263733-0c070cf4-2b2c-4312-9f6b-cd430bd50afa.PNG)
