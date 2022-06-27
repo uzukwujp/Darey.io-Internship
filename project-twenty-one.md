@@ -43,3 +43,4 @@ The Worker nodes has the following services running on each of them:
 ![kubelet-and-kube-proxy-running](https://user-images.githubusercontent.com/52359007/175992125-bfa12bf9-4a0a-4b53-9d16-7ee562ebded9.PNG)
 
 ![worker-nodes-joining-cluster](https://user-images.githubusercontent.com/52359007/175992459-5e77dbde-6d5f-4e2d-9cd1-96695e16f426.PNG)
+
