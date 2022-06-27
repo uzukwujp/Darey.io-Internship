@@ -154,8 +154,29 @@ Approach 2:
    - Ensure that the tagged images from your Jenkinsfile have a prefix that suggests which branch the image was pushed from. For example, feature-0.0.1.
    - Verify that the images pushed from the CI can be found at the registry.
 
+
+ check the Jenkinsfile of my repo [here](https://github.com/uzukwujp/php-todo)
+
+
+
   
   
     
+![blue-ocean](https://user-images.githubusercontent.com/52359007/175981501-e3a518aa-44e5-42f4-92dd-1b8e6e3db75c.PNG)
+
+
+## Deployment with Docker Compose
+
+You can check tooling.yaml in my repo for my docker-compose implementation
+
+
+
+![docker-compose-running](https://user-images.githubusercontent.com/52359007/175981985-66fd0eb5-589b-48e8-b928-c6edda6040d2.PNG)
+
+
+## Practice Task №2 – Complete Continous Integration With A Test Stage
+
+ The Jenkinsfile in the repo has a successful test stage
+
 
 
