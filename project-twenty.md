@@ -30,4 +30,59 @@ containers are used to package application code, app configuration, dependencies
 
      `docker ps -a`
      
+ ### CONNECTING TO THE MYSQL DOCKER CONTAINER
+ 
+ ## Approach 1:
+ 
+ Connecting directly to the container running the MySQL server:
+ 
+ ```
+ 
+ $ docker exec -it mysql bash
+
+or
+
+$ docker exec -it mysql mysql -uroot -p
+```
+
+Approach 2:
+
+ - First, create a network:
+
+   `docker network create --subnet=172.18.0.0/24 tooling_app_network`
+   
+ - create an environment variable to store the root password:
+
+   `export MYSQL_PW=`
+   
+ - Then, pull the image and run the container, all in one command like below:
+
+   ` docker run --network tooling_app_network -h mysqlserverhost --name=mysql-server -e MYSQL_ROOT_PASSWORD=$MYSQL_PW  -d mysql/mysql-server:latest`
+   
+## Connecting to the MySQL server from a second container running the MySQL client utility
+
+
+   - Run the MySQL Client Container:
+
+     `docker run --network tooling_app_network --name mysql-client -it --rm mysql mysql -h mysqlserverhost -u  -p`
+     
+     
+## Prepare database schema
+
+
+   - Clone the Tooling-app repository from [here](clone https://github.com/darey-devops/tooling.git)
+
+     `git clone https://github.com/darey-devops/tooling.git`
+     
+   - On your terminal, export the location of the SQL file
+
+     `export tooling_db_schema=tooling/html/tooling_db_schema.sql`
+     
+   - Verify that the path is exported:
+
+     `echo $tooling_db_schema`
+
+
+ 
+     
    
