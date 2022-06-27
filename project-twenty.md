@@ -125,5 +125,9 @@ Approach 2:
 
 
   ![Dockerfile-1](https://user-images.githubusercontent.com/52359007/175976875-a4034ec0-1edc-4fbb-96ec-6a0556c73339.PNG)
+  
+  
+  
 
-   
+  ![working](https://user-images.githubusercontent.com/52359007/175977116-79d3ce3b-b852-463e-8ad4-53d21c423cc3.PNG)
+
