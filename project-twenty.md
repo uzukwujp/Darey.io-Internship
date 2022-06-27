@@ -16,6 +16,18 @@ containers are used to package application code, app configuration, dependencies
   
   `docker pull mysql/mysql-server:latest`
   
-- List the images to check that you have downloaded them successfully:
+   - List the images to check that you have downloaded them successfully:
 
-  `docker image ls`
+     `docker image ls`
+  
+- Step 2: Deploy the MySQL Container to your Docker Engine
+
+  ```
+  docker run --name <container_name> -e MYSQL_ROOT_PASSWORD=<my-secret-pw> -d mysql/mysql-server:latest
+  ```
+  
+   - Then, check to see if the MySQL container is running: Assuming the container name specified is mysql-server 
+
+     `docker ps -a`
+     
+   
