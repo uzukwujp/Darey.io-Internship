@@ -122,7 +122,8 @@ Approach 2:
    - Create a new Docker Hub repository
    - Push the docker images from your PC to the repository
 
-  
 
-     
+
+  ![Dockerfile-1](https://user-images.githubusercontent.com/52359007/175976875-a4034ec0-1edc-4fbb-96ec-6a0556c73339.PNG)
+
    
