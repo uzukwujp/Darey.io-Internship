@@ -118,9 +118,9 @@ Approach 2:
 
  - Part 1:
 
-   - Create an account in Docker Hub
-   - Create a new Docker Hub repository
-   - Push the docker images from your PC to the repository
+   - Write a Dockerfile for the TODO app
+   - Run both database and app on your laptop Docker Engine
+   - Access the application from the browser
 
 
 
