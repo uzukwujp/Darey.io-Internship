@@ -113,5 +113,16 @@ Approach 2:
       
 ![prj-20-first-stage](https://user-images.githubusercontent.com/52359007/175974065-c6cf7f78-ef3e-41b3-ac93-a7d4693e00fd.PNG)
 
+
+## PRACTICE TASK
+
+ - Part 1:
+
+   - Create an account in Docker Hub
+   - Create a new Docker Hub repository
+   - Push the docker images from your PC to the repository
+
+  
+
      
    
