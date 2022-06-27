@@ -81,7 +81,38 @@ Approach 2:
    - Verify that the path is exported:
 
      `echo $tooling_db_schema`
+     
+   - Use the SQL script to create the database and prepare the schema. With the docker exec command, you can execute a command in a running container:
 
+     `docker exec -i mysql-server mysql -uroot -p$MYSQL_PW < $tooling_db_schema `
+     
+   - Update the .env file with connection details to the database:
+
+                      ```
+                           sudo vi .env
+
+                        MYSQL_IP=mysqlserverhost
+                        MYSQL_USER=username
+                        MYSQL_PASS=client-secrete-password
+                        MYSQL_DBNAME=toolingdb
+     
+                     ```
+                     
+      - Run the Tooling App
+
+        - Build the image using the Dockerfile in the clonned Repo
+          
+          `docker build -t tooling:0.0.1 .`
+          
+        - Run the app with the command below: 
+
+          `docker run --network tooling_app_network -p 8085:80 -it tooling:0.0.1`
+          
+        - You should find something like the screenshot below on your browser:
+          
+      
+
+   ![prj-20-first-stage](https://user-images.githubusercontent.com/52359007/175973696-ec2ab740-4496-41c9-823f-89021479f100.P
 
  
      
