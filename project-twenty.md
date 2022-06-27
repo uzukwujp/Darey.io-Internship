@@ -140,5 +140,22 @@ Approach 2:
 
     `docker push <image name>`
     
+
+
+ ![php-todo-image](https://user-images.githubusercontent.com/52359007/175979559-e1c539f4-0a41-4651-adf0-24ceb60e67cb.PNG)
  
+ 
+ - Part 3:
+
+   - Write a Jenkinsfile that will simulate a Docker Build and a Docker Push to the registry
+   - Connect your repo to Jenkins
+   - Create a multi-branch pipeline
+   - Simulate a CI pipeline from a feature and master branch using previously created Jenkinsfile
+   - Ensure that the tagged images from your Jenkinsfile have a prefix that suggests which branch the image was pushed from. For example, feature-0.0.1.
+   - Verify that the images pushed from the CI can be found at the registry.
+
+  
+  
+    
+
 
