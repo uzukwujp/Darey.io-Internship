@@ -111,9 +111,7 @@ Approach 2:
         - You should find something like the screenshot below on your browser:
           
       
+![prj-20-first-stage](https://user-images.githubusercontent.com/52359007/175974065-c6cf7f78-ef3e-41b3-ac93-a7d4693e00fd.PNG)
 
-   ![prj-20-first-stage](https://user-images.githubusercontent.com/52359007/175973696-ec2ab740-4496-41c9-823f-89021479f100.P
-
- 
      
    
