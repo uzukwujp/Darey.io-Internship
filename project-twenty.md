@@ -130,4 +130,15 @@ Approach 2:
   
 
   ![working](https://user-images.githubusercontent.com/52359007/175977116-79d3ce3b-b852-463e-8ad4-53d21c423cc3.PNG)
+  
+  
+- Part 2:
+
+  - Create an account in Docker Hub
+  - Create a new Docker Hub repository
+  - Push the docker images from your PC to the repository
+
+    `docker push <image name>`
+    
+ 
 
