@@ -1,5 +1,5 @@
 
-#MIGRATION TO THE СLOUD WITH CONTAINERIZATION. PART 1 – DOCKER &AMP; DOCKER COMPOSE
+# MIGRATION TO THE СLOUD WITH CONTAINERIZATION. PART 1 – DOCKER &AMP; DOCKER COMPOSE
 
 Untill now we have using Ec2 instance to install and deploy our softwares. While this is easy and fast, it has its own challenges. Consider that you have the requirement into two set of softwares with both needing different version of a dependency say java. This is will lead to conflict. In software speaks it is called dependency matrix.
 
@@ -10,7 +10,7 @@ All the problem highlighted above is solved by containerization. Container solve
 
 containers are used to package application code, app configuration, dependencies and runtime environment required for running an application. This garanties to a large extent that the application runs efficiently and predictably on any environment it is deployed provider it has a container runtime.
 
-###MySQL in container
+### MySQL in container
 
 - step 1: Pull MySQL Docker Image from Docker Hub Registry
   
