@@ -165,6 +165,9 @@ Approach 2:
 ![blue-ocean](https://user-images.githubusercontent.com/52359007/175981501-e3a518aa-44e5-42f4-92dd-1b8e6e3db75c.PNG)
 
 
+![200 ok](https://user-images.githubusercontent.com/52359007/176102537-a641cd3e-ff55-4813-9c41-84fb1a828b62.PNG)
+
+
 ## Deployment with Docker Compose
 
 You can check tooling.yaml in my repo for my docker-compose implementation
