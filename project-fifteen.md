@@ -77,14 +77,14 @@ Project fifteen is all about implementing the infrastructure architecture above 
 
   - Ensure that it has the following software installed:
 
-     - python
-     - ntp
-     - net-tools
-     - vim
-     - wget
-     - telnet
-     - epel-release
-     - htop
+     - python : sudo yum install -y  python
+     - ntp : sudo yum install ntp
+     - net-tools : sudo yum -y install net-tools
+     - vim : sudo yum install -y vim-enhanced  
+     - wget : sudo yum install -y wget
+     - telnet : sudo yum -y install telnet.
+     - epel-release : sudo yum install -y epel-release
+     - htop : sudo yum install -y htop
 
   - Create an AMI out of the EC2 instance
 
