@@ -184,7 +184,7 @@ Project fifteen is all about implementing the infrastructure architecture above 
     
     - epel-release
     
-    - htop
+    - htop : sudo yum install -y htop
     
   - Associate an Elastic IP with each of the Bastion EC2 Instances
   
